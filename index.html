@@ -9,6 +9,31 @@
 	<div ng-controller = 'controllerA'>
 		<p>{{msg}}</p>
 		<p>{{value}}</p>
+		<input type="text" value="" ng-model = 'name'>
+		<p>watchedItem:  {{counter}}</p>
+	</div>
+	<div ng-controller = "controllerB">
+		<button ng-repeat = 'name in names' ng-click = 'changeName()'>
+			{{name}}
+		</button><br>
+		<div ng-controller = 'controllerC'>
+			<label>Name : </label><p>{{currentName}}</p>
+			<label>Race : </label><p>{{currentInfo.race}}</p>
+			<label>Weapon : </label><p>{{currentInfo.weapon}}</p>
+			<button ng-click = 'deleteChar()'>Delete</button>
+		</div>
+	</div>
+
+	//一部分常用的过滤器
+	<div>
+		<h2>Basic Filters</h2>
+		Number : {{123.456789|number : 3}}<br>
+		Currency : {{123.456789|currency : '$'}}<br>
+		Date : {{1389323623006|date : 'yyyy-MM-dd HH:mm:ss Z'}}<br>
+		JSON : {{JSONObj|json}}<br>
+		Limit Array : {{days|limitTo:3}}<br>
+		Uppercase : {{'word'|uppercase|limitTo : 10}}<br>
+		Lowercase : {{'WorD'|lowercase|limitTo:10}}<br>
 	</div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
