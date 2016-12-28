@@ -46,12 +46,19 @@
                 <th ng-click = "setSort('model')">Model</th>
                 <th ng-click = "setSort('mp')">MegaPixel</th>
             </tr>
-            <tr ng-repeat = 'camera in filteredCameras | orderBy : column:reverse'>
+            <tr ng-repeat = 'camera in filteredCameras | orderBy:column:reverse'>
                 <td>{{camera.make}}</td>
                 <td>{{camera.model}}</td>
                 <td>{{camera.mp}}</td>
             </tr>
         </table>
+    </div>
+    <div ng-controller = 'controllerE'>
+        <h2>自定义过滤器</h2>
+        <p>{{phrase|censor:"***"}}</p>
+        <p>{{"This is some bad ,dark evil text."|censor:"happy"}}</p>
+        <button ng-click="filterText()">click</button>
+        <p>{{txt}}</p>
     </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
