@@ -93,3 +93,38 @@ myModule.controller('controllerE',function ($scope,censorFilter) {
 		$scope.txt = censorFilter($scope.txt ,'<<censored>>')
 	}
 });
+
+//彼此互交的自定义指令
+myModule.directive('myPhotos',function () {
+	return {
+		restrict: 'E',  //限制指令行为    A为一个属性名 E为一个元素名  C为一个类名
+		// replace : true , //可以作为子模板来添加
+		transclude : true ,//指令内部的组件可以访问指令以外的作用域
+		scope : {} , //配置指令的作用域
+		controller : function ($scope) {
+			var photos = $scope.photos = [];
+			$scope.select = function (photo) {
+				angular.forEach(photos , function (photo) {
+					photo.selected = false;
+				});
+				photo.selected = true;
+			};
+			this.addPhoto = function (photo) {
+				photos.push =(photo);
+			}
+		},
+		templateUrl : './my_photos.html'
+	}
+});
+myModule.directive('myPhoto', function () {
+	return {
+		require : '^myPhotos' ,
+		restrict : 'E' ,
+		transclude : true ,
+		scope : { title : '@'} ,
+		link : function (scope ,elem ,attrs , photosControl) {
+			photosControl.addPhoto(scope);
+		},
+		template : '<div ng-show="selected" ng-transclude></div>'
+	};
+});

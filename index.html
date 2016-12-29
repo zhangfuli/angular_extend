@@ -24,7 +24,7 @@
 		</div>
 	</div>
 
-	//一部分常用的过滤器
+	<p>一部分常用的过滤器</p>
 	<div>
 		<h2>Basic Filters</h2>
 		Number : {{123.456789|number : 3}}<br>
@@ -60,6 +60,17 @@
         <button ng-click="filterText()">click</button>
         <p>{{txt}}</p>
     </div>
+	<my-photos>
+        <my-photo title = 'Flower'>
+            <img src="./images/flower.jpg" alt="" height="150px">
+        </my-photo>
+        <my-photo title = 'Arch'>
+            <img src="./images/arch.jpg" alt="" height="150px">
+        </my-photo>
+        <my-photo title = 'Lake'>
+            <img src="./images/lake.jpg" alt="" height="150px">
+        </my-photo>
+    </my-photos>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script src = "http://code.angularjs.org/1.2.9/angular.min.js"></script>	
