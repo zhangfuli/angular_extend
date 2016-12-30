@@ -113,7 +113,7 @@ myModule.directive('myPhotos',function () {
 				photos.push =(photo);
 			}
 		},
-		templateUrl : './my_photos.html'
+		templateUrl : 'my_photos.html'
 	}
 });
 myModule.directive('myPhoto', function () {
@@ -122,7 +122,7 @@ myModule.directive('myPhoto', function () {
 		restrict : 'E' ,
 		transclude : true ,
 		scope : { title : '@'} ,
-		link : function (scope ,elem ,attrs , photosControl) {
+		link:	function (scope ,elem ,attrs , photosControl) {
 			photosControl.addPhoto(scope);
 		},
 		template : '<div ng-show="selected" ng-transclude></div>'
