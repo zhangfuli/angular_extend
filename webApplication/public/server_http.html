@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
     <title>AngularJS $http Server</title>
 </head>
-<body>
+<body ng-app = 'myApp'>
     <div ng-controller = 'controllerA'>
         <h2>$http Server</h2>
         <input type="button" ng-click ='resetDays()' value='Initialize Days'>
@@ -19,6 +17,6 @@
         </div>
     </div>
 </body>
-<script src = 'http://code.angular.js/org/1.2.9/angular.min.js'></script>
-<script src = 'javascripts/server_http.js'></script>
+<script src = 'http://code.angularjs.org/1.2.9/angular.min.js'></script>
+<script src = 'javascripts/service_http.js'></script>
 </html>
