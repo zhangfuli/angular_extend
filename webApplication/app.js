@@ -21,11 +21,12 @@ app.get('/reset/days' ,function(req , res){
 	serviceDays = days.slice(0);
 	res.json(serviceDays);
 });
-app.post('/remove/day',function(req,res){
+
+
+app.get('/remove/day',function(req,res){
 	if(serviceDays.length>2){
-		serviceDays.splice(serviceDays.indexOf(req.body.day) , 1);
-		console.log(days);
-		res.json(serviceDays);
+		days.splice(req.query , 1);
+		res.json(days);
 	}else{
 		res.json(400 , {msg:'You must leave 2 days'});
 	}
