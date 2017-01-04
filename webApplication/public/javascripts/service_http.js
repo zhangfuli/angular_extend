@@ -33,3 +33,9 @@ myApp.controller('controllerB' , function ($scope,myCache){
 myApp.controller('controllerC' , function ($scope,myCache){
 	$scope.value = myCache.get('myValue');
 });
+
+//$window服务实现浏览器警报
+myApp.controller('controllerD' , function ($scope, $window){
+	window.alert("Your Screen is : \n (" + window.screen.availWidth + "X," 
+				+ window.screen.availHeight + "Y)");
+});
