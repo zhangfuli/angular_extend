@@ -21,8 +21,6 @@ app.get('/reset/days' ,function(req , res){
 	serviceDays = days.slice(0);
 	res.json(serviceDays);
 });
-
-
 app.get('/remove/day',function(req,res){
 	if(serviceDays.length>2){
 		days.splice(req.query , 1);
@@ -31,3 +29,6 @@ app.get('/remove/day',function(req,res){
 		res.json(400 , {msg:'You must leave 2 days'});
 	}
 });
+app.get('/cookie' ,function (req , res){
+	res.sendFile(__dirname+'/public/server_cookies.html')
+})
