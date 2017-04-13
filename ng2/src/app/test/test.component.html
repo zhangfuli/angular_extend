@@ -5,3 +5,12 @@
   <input type="text" [value] ='name' [placeholder]="name" [(ngModel)]="name"><br>
   Hello ,{{name}}
 </p>
+<button (click)="dosomething($event)">dosomething</button><br>
+
+局部变量
+<input type="text" #phone (value)="phoneNum">
+<button (click)="phoneClick(phone.value)">trans</button>
+<br>
+*语法<br>
+<p *ngIf="active">我是段落</p>
+<button (click)="isActive($event)">{{active.toString()}}</button>

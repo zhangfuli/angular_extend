@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { MigrateComponent } from './migrate/migrate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    MigrateComponent
   ],
   imports: [
     BrowserModule,
