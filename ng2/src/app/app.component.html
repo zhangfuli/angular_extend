@@ -1,4 +1,17 @@
 <h1>
   {{title}}
 </h1>
-<app-test></app-test>
+<button class="btn-success btn">测试bootstrap</button>
+<app-test></app-test><br>
+<app-migrate></app-migrate><!--用于嵌套选择器-->
+<br><br><br><br>
+DirectivesDirective:
+<p appDirectives>hello, lewis</p><!--注入directive-->
+myHighlight:
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">yellow
+  <input type="radio" name="colors" (click)="color='cyan'">cyan
+</div>
+<p [appHightlight]="color">Highlight me!</p>
+<p [appHightlight]="color" [defaultColor]="'violet'">Highlight me too!</p>

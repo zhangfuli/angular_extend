@@ -5,12 +5,16 @@
   <input type="text" [value] ='name' [placeholder]="name" [(ngModel)]="name"><br>
   Hello ,{{name}}
 </p>
+<!--[value]表示属性  跟value=""一样     []框属性-->
+<!--[(ngModel)]=''  ==  ng-model=''(angular1)-->
 <button (click)="dosomething($event)">dosomething</button><br>
-
+<!--(click)点击事件   ()里面是事件  要传$event-->
 局部变量
 <input type="text" #phone (value)="phoneNum">
 <button (click)="phoneClick(phone.value)">trans</button>
+<!--#表示局部变量-->
 <br>
 *语法<br>
 <p *ngIf="active">我是段落</p>
 <button (click)="isActive($event)">{{active.toString()}}</button>
+<!--*ngIf="" == ng-if=""(angular1)-->

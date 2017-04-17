@@ -7,11 +7,16 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { MigrateComponent } from './migrate/migrate.component';
 
+import { DirectivesDirective } from './directives.directive';
+import { HightlightDirective } from './hightlight.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    MigrateComponent
+    MigrateComponent,
+    DirectivesDirective,
+    HightlightDirective
   ],
   imports: [
     BrowserModule,

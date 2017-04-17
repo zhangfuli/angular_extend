@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-test',
+  selector: 'app-test',  //选择器的名字   <app-test></app-test>
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
@@ -12,7 +12,7 @@ export class TestComponent implements OnInit {
   }
   name: string = 'zfl';
   active: boolean = true;
-  dosomething($event){
+  dosomething($event){       //点击事件触发
     alert('clicked');
   }
   phoneClick($event){
