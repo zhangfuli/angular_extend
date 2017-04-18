@@ -9,6 +9,8 @@ import { MigrateComponent } from './migrate/migrate.component';
 
 import { DirectivesDirective } from './directives.directive';
 import { HightlightDirective } from './hightlight.directive';
+import { UnlessDirective } from './unless.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HightlightDirective } from './hightlight.directive';
     TestComponent,
     MigrateComponent,
     DirectivesDirective,
-    HightlightDirective
+    HightlightDirective,
+    UnlessDirective,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
