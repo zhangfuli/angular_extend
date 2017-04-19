@@ -4,6 +4,8 @@ import { DirectivesDirective } from './directives.directive';
 import { HightlightDirective } from './hightlight.directive';
 import { UnlessDirective }from './unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ExponentialPipe } from './exponential.pipe';
+import { FetchPipe } from './fetch.pipe'
 @Component({
   selector: 'app-root',
   //directives:[DirectivesDirective, HightlightDirective],
@@ -11,7 +13,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
   styleUrls: ['./app.component.css']
 })
 @NgModule({
-  declarations:[AppComponent,DirectivesDirective, HightlightDirective,UnlessDirective,LifecycleComponent], //<---need to declare
+  declarations:[AppComponent,DirectivesDirective, HightlightDirective,
+    UnlessDirective,LifecycleComponent,ExponentialPipe,FetchPipe], //<---need to declare
   schemas:     [CUSTOM_ELEMENTS_SCHEMA]             //<---added this line
 })
 export class AppComponent {

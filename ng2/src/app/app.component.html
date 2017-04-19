@@ -23,3 +23,12 @@ myHighlight:
   Set 'condition' to {{condition ? 'False': 'True'}}
 </button>
 <app-lifecycle *appUnless="condition" name="lewis"></app-lifecycle>
+<br>
+<p>pipe</p>
+<p>{{2| exponential: 4 }}</p>
+<p>Heroes from Json File</p>
+<div *ngFor="let hero of ('../assets/heroes.json' |fetch) ">
+  <p>{{hero.name}}</p>
+</div>
+<p>Heroes are JSON:</p>
+<p>{{'../assets/heroes.json'| fetch| json}}</p>

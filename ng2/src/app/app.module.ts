@@ -11,6 +11,8 @@ import { DirectivesDirective } from './directives.directive';
 import { HightlightDirective } from './hightlight.directive';
 import { UnlessDirective } from './unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ExponentialPipe } from './exponential.pipe';
+import { FetchPipe } from './fetch.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     DirectivesDirective,
     HightlightDirective,
     UnlessDirective,
-    LifecycleComponent
+    LifecycleComponent,
+    ExponentialPipe,
+    FetchPipe
   ],
   imports: [
     BrowserModule,
