@@ -13,6 +13,7 @@ import { UnlessDirective } from './unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ExponentialPipe } from './exponential.pipe';
 import { FetchPipe } from './fetch.pipe';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FetchPipe } from './fetch.pipe';
     UnlessDirective,
     LifecycleComponent,
     ExponentialPipe,
-    FetchPipe
+    FetchPipe,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
