@@ -45,6 +45,7 @@ export class AppComponent implements OnInit{
       // })
       .subscribe((res:any)=>{
         console.log("res:"+res);
+        console.log(res.json());
       })
   }
   ngOnInit(){
