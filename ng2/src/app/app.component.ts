@@ -12,6 +12,7 @@ import { HeroService } from './hero.service';
 import {HEROES} from "../assets/heroes";
 import {HeroHttpService} from "./hero-http.service";
 import {Response} from "@angular/http";
+
 @Component({
   selector: 'app-root',
   //directives:[DirectivesDirective, HightlightDirective],
@@ -19,12 +20,14 @@ import {Response} from "@angular/http";
   styleUrls: ['./app.component.css'],
   providers: [HeroService,HeroHttpService]
 })
+
 @NgModule({
   declarations:[AppComponent,DirectivesDirective, HightlightDirective,
     UnlessDirective,LifecycleComponent,ExponentialPipe,FetchPipe,
     HeroDetailComponent], //<---need to declare
   schemas:     [CUSTOM_ELEMENTS_SCHEMA]             //<---added this line
 })
+
 export class AppComponent implements OnInit{
   //构造函数注入服务
   constructor (private _heroService: HeroService,private _heroHttpService:HeroHttpService){}
@@ -40,12 +43,10 @@ export class AppComponent implements OnInit{
   onSelect(hero: Hero) { this.selectedHero = hero; }
   getOnline(){
     this._heroHttpService.getData("http://localhost:8089/documentary/getDocument")
-      // .map((r: Response)=>{
-      //   r.json();
-      // })
       .subscribe((res:any)=>{
         console.log("res:"+res);
         console.log(res.json());
+        //////跨域问题没有解决
       })
   }
   ngOnInit(){

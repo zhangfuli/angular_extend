@@ -1,3 +1,4 @@
 .idea
 webApplication/node_modules
 ng2/.idea
+ng2/node_modules

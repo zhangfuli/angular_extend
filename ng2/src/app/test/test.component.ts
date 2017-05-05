@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-test',  //选择器的名字   <app-test></app-test>
   templateUrl: './test.component.html',
@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   constructor() {}
+  // constructor(public router: Router) {
+  //   router.navigateByUrl('heroes');
+  // }
+
   ngOnInit() {  //生命周期的钩子这个方法会在组件初始化时候调用
   }
   name: string = 'zfl';
