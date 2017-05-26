@@ -39,6 +39,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })//img的链接
+      .when('/myroute', {
+        templateUrl: 'views/myroute.html',
+        controller: 'MyrouteCtrl',
+        controllerAs: 'myroute'
+      })
       .otherwise({
         redirectTo: '/'
       });
